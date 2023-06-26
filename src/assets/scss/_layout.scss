@@ -1,0 +1,134 @@
+.header {
+  padding: 32px;
+}
+
+.heading2 {
+  font-size: 40px;
+  margin-bottom: 32px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.chromeBox {
+  display: flex;
+  align-items: center;
+  margin-top: 32px;
+  @include breakpoint(xs) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .btn {
+      width: 100%!important;
+      margin-bottom: 16px;
+    }
+  }
+  &__install {
+    display: flex;
+    align-items: center;
+    @include breakpoint(sm) {
+      padding: 0 32px;
+    }
+    > div {
+      padding-left: 10px;
+    }
+    .p1 {
+      font-size: 22px;
+      font-weight: 700;
+    }
+    .p2 {}
+  }
+}
+
+.btn {
+  background-color: rgb(101, 115, 255);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all .2s;
+  border: 1px solid rgb(101, 115, 255);
+  &:hover {
+    background-color: rgb(131, 143, 254);
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(251, 251, 253);
+
+  @include breakpoint(xs) {
+    padding: 32px 16px;
+    flex-wrap: wrap;
+    text-align: center;
+
+  }
+  @include breakpoint(sm) {
+    padding: 32px;
+  }
+  &__left{
+    @include breakpoint(xs) {
+      width: 100%;
+      order: 2;
+      margin: 16px 0;
+
+    }
+  }
+  &__center{
+    text-align: center;
+    @include breakpoint(xs) {
+      width: 100%;
+      order: 1;
+    }
+
+  }
+  &__right{
+    @include breakpoint(xs) {
+      width: 100%;
+      order: 3;
+    }
+
+  }
+  &__nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    li {
+      padding: 0 12px;
+      a {
+        display: block;
+        font-size: 14px;
+        color: #000;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  &__social {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    @include breakpoint(xs) {
+      justify-content: space-between;
+    }
+    li {
+      padding: 0 12px;
+      a {
+        display: block;
+        svg {
+          width: 40px;
+          height: 40px;
+          display: block;
+        }
+      }
+    }
+  }
+}
