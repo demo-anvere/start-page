@@ -24,7 +24,7 @@ function App() {
 				</header>
 				<main>
 					<Routes>
-						<Route exact path="/" element={<Home />} />
+						<Route exact path="/start-page" element={<Home />} />
 						<Route
 							exact
 							path="/privacy-policy"
